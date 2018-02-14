@@ -1,2 +1,2 @@
 # js-demos
-Javascript demos
+Random Javascript demos and experiments
