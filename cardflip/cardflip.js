@@ -18,33 +18,36 @@ $(document).ready(function() {
 			var suitchosen = cardsuits[Math.floor(Math.random() * 4)]; //0 to 3
 			var valuechosen = cardvalues[Math.floor(Math.random() * 13)]; //0 to 12
 
-			$(this).text(valuechosen+" of "+suitchosen);
-			$(this).addClass("revealed");
+			if(!$(this).hasClass("revealed")) {
+				$(this).text(valuechosen+" of "+suitchosen);
+				$(this).addClass("revealed");
 
-			//add this id to clicked cards
-			if(flippedfirstcardvalue == "") {
-				console.log("setting flippedcard to: "+valuechosen+" of "+suitchosen);
-				flippedfirstcardvalue = valuechosen;
-				flippedfirstcardsuit = suitchosen;
-			} else {
-				console.log("already flipped.. comparing to: "+valuechosen+" of "+suitchosen);
-				//there was one previously flipped - check against this one
-				//check which is higher!
-				var turntext = document.getElementById('turntext');
-				if(valuechosen > flippedfirstcardvalue) {
-					console.log("second player wins!");
-					$(turntext).text("second player wins!");
-					$(".revealed").addClass("solved");
+				//add this id to clicked cards
+				if(flippedfirstcardvalue == "") {
+					console.log("setting flippedcard to: "+valuechosen+" of "+suitchosen);
+					flippedfirstcardvalue = valuechosen;
+					flippedfirstcardsuit = suitchosen;
 				} else {
-					console.log("first player wins!");
-					$(turntext).text("first player wins!");
-					$(".revealed").addClass("solved");	
-				}
-				window.setTimeout(function() {
-					window.location.reload(true);
-					//reset the page
-				}, 500);
+					console.log("already flipped.. comparing to: "+valuechosen+" of "+suitchosen);
+					//there was one previously flipped - check against this one
+					//check which is higher!
+					var turntext = document.getElementById('turntext');
+					if(valuechosen > flippedfirstcardvalue) {
+						console.log("second player wins!");
+						$(turntext).text("second player wins!");
+						$(".revealed").addClass("solved");
+					} else {
+						console.log("first player wins!");
+						$(turntext).text("first player wins!");
+						$(".revealed").addClass("solved");	
+					}
+					window.setTimeout(function() {
+						window.location.reload(true);
+						//reset the page
+					}, 2000);
 
+				}
+				
 			}
 		}
 	);
