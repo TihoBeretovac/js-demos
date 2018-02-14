@@ -1,0 +1,44 @@
+<head>
+	<link rel="stylesheet" href="tictac.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<!-- jQuery Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+	<script src="./tictac.js"></script>
+	<meta charset=utf-8 />
+</link>
+</head>
+<body>
+	<div class="container">
+		<h1>Tictac toe!</h1>
+	</div>
+	<div class="container" id="turntext">
+		<p>Click to play tictac toe. It's tictac's turn!</p>
+	</div>
+	<div class="container cardtable">
+		<div class="row">
+			<div class="col-md-4"><div class="card" data-row="0" data-col="0" id="1"></div></div>
+			<div class="col-md-4"><div class="card" data-row="0" data-col="1" id="2"></div></div>
+			<div class="col-md-4"><div class="card" data-row="0" data-col="2" id="3"></div></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"><div class="card" data-row="1" data-col="0" id="4"></div></div>
+			<div class="col-md-4"><div class="card" data-row="1" data-col="1" id="5"></div></div>
+			<div class="col-md-4"><div class="card" data-row="1" data-col="2" id="6"></div></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"><div class="card" data-row="2" data-col="0" id="7"></div></div>
+			<div class="col-md-4"><div class="card" data-row="2" data-col="1" id="8"></div></div>
+			<div class="col-md-4"><div class="card" data-row="2" data-col="2" id="9"></div></div>
+		</div>
+	</div>
+	<!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p> -->
+	<div id="ex1" class="modal">
+	  <h1 id="modaltext">Someone won! Yay!</h1>
+	  <a href="#" onclick="window.location.reload(true);" rel="modal:close">Close</a>
+	</div>
+</body>
