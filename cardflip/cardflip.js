@@ -29,6 +29,8 @@ $(document).ready(function() {
 					console.log("setting flippedcard to: "+valuechosen+" of "+suitchosen);
 					flippedfirstcardvalue = valuechosen;
 					flippedfirstcardsuit = suitchosen;
+					var turntext = document.getElementById('turntext');
+					$(turntext).text("Player 2 - Choose a card!");
 				} else {
 					console.log("already flipped.. comparing to: "+valuechosen+" of "+suitchosen);
 					//there was one previously flipped - check against this one
