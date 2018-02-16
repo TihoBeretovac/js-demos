@@ -7,30 +7,6 @@ p {
 	font-family: sans-serif;
 }
 
-.cardtable {
-	background-color: darkgreen;
-	border-radius: 10px;	
-}
-
-.card {
-	border: 3px solid black;
-	border-radius: 10px;
-	padding: 15px 15px 15px 15px;
-	margin: 10px 10px 10px 10px;
-	text-align: center;
-	font-size: 40px;
-	background-color: goldenrod;
-	min-height: 700px;
-}
-
-.card.revealed {
-	/*background-color: gray;*/
-}
-
-.card.solved {
-/*	background-color: rgb(41, 127, 143);
-	border: 3px solid gold;
-*/}
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -61,6 +37,14 @@ p {
 	position: absolute;
 	top: 0;
 	left: 0;
+	border: 3px solid black;
+	border-radius: 10px;
+	padding: 15px 15px 15px 15px;
+	margin: 10px 10px 10px 10px;
+	text-align: center;
+	font-size: 40px;
+	background-color: goldenrod;
+	min-height: 700px;
 }
 
 /* front pane, placed above back */
@@ -68,11 +52,6 @@ p {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
 	background: 
 radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
 radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
@@ -84,4 +63,9 @@ radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) 50px 5
 radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) 50px 50px;
 background-color:#63773F;
 background-size:100px 100px;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
