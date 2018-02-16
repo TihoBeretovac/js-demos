@@ -19,8 +19,10 @@ $(document).ready(function() {
 			var valuechosen = cardvalues[Math.floor(Math.random() * 13)]; //0 to 12
 
 			if(!$(this).hasClass("revealed")) {
-				$(this).text(valuechosen+" of "+suitchosen);
+				$(this).find(".back").text(valuechosen+" of "+suitchosen);
 				$(this).addClass("revealed");
+				$(this).addClass("flip");
+				// document.querySelector("#myCard").classList.toggle("flip");
 
 				//add this id to clicked cards
 				if(flippedfirstcardvalue == "") {
@@ -47,7 +49,7 @@ $(document).ready(function() {
 					}, 2000);
 
 				}
-				
+
 			}
 		}
 	);
